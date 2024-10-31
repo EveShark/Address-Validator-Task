@@ -1,0 +1,57 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+# Interactive Address Validator with Map Integration
+
+## Project Overview
+This project aims to create a React-based web application where users can input Indian postal codes to validate them and visualize the corresponding location on an interactive map. The project should incorporate smooth animations for user feedback and interactivity.
+
+## Features
+- **Postal Code Validation**: Real-time validation of Indian postal codes using the ApyHub API (Use Free Tier).
+- **Map Integration**: Display valid addresses on a map using Mapbox (https://docs.mapbox.com/api/overview/).
+- **Animations**: Framer Motion for dynamic feedback, such as shaking input for invalid codes and marker transitions on the map.
+- **UI Enhancements**: Use ShadCN UI components for a polished, modern interface.
+- **TypeScript Integration**: For type safety and scalability.
+
+## Tech Stack & Libraries
+- **React**: Core framework for building the application.
+- **TypeScript**: Enhances code with static typing.
+- **ApyHub API**: For Indian postal code validation. (https://apyhub.com/utility/data-postcodes-india)
+- **Framer Motion**: Used for animations and transitions.
+- **ShadCN UI Library**: For stylish, pre-built React components.
+- **Mapbox GL JS**: For the interactive map and marker display.
+- **Next.js**: (Optional) for server-side rendering (SSR) and improved SEO.
+
+## Instructions
+### 1. Set Up Your Development Environment
+- Clone the project repository or create a new React project:
+  ```bash
+  npx create-react-app address-validator --template typescript
+  cd address-validator
+  ```
+
+- Install the required libraries:
+  ```bash
+  npm install framer-motion @types/react apyhub mapbox-gl mapbox-gl-react
+  ```
+
+### 2. Integrate the ApyHub API
+- Create an account at [ApyHub](https://apyhub.com) and get your API key.
+- Make a service function (`api.ts`) to handle API calls
+
+### 3. Build the UI with ShadCN Components
+- **Form Component**: Design the form and display components using ShadCN UI for consistent styling for users to input postal codes.
+- **Input Validation**:Implement input validation feedback using pre-built ShadCN components and integrate Framer Motion for enhanced effects.
+- **Map Component**: Use `mapbox-gl` to render a map showing markers for valid postal codes.
+
+### 4. Add Animations with Framer Motion
+- Use Framer Motion for:
+  - Shaking input fields on invalid postal code entries.
+  - Smooth transitions for map marker appearance and movement.
+
+### 5. Combine Components and Handle Logic
+- Implement form handling and API response validation.
+- Display a map marker on valid postal code input, using state to manage responses and map updates.
+
+### 6. Optional Enhancements
+- Implement SSR with Next.js for better performance.
+- Show additional data like nearby locations or addresses using further integrations.
